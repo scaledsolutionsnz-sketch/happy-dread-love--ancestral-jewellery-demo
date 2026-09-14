@@ -15,17 +15,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0e1512;
-  --ink2:#141f19;
-  --ink3:#1b2921;
-  --bone:#eef1ea;
-  --bone2:#e3e9e0;
-  --jade:#5fb08d;
-  --jade-deep:#2d6a4e;
-  --light:#e9eee8;
-  --dim:#9fb0a4;
+  --ink:#101910;
+  --ink2:#183721;
+  --ink3:#265033;
+  --bone:#fff3d6;
+  --bone2:#f4e4bc;
+  --jade:#f2c645;
+  --jade-deep:#28753d;
+  --light:#fff8e8;
+  --dim:#d3d8bd;
   --dark-text:#1a241e;
-  --dark-dim:#4c5c52;
+  --dark-dim:#4b563e;
   --radius:14px;
   --font-display:'Italiana',serif;
   --font-body:'Manrope',sans-serif;
@@ -76,7 +76,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,21,18,
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-weight:800;font-size:1rem;line-height:1;transition:transform .2s,background .25s,border-color .25s;cursor:pointer;border:none;font-family:var(--font-body)}
 .btn:active{transform:scale(.98)}
 .btn-solid{background:var(--jade);color:var(--ink)}
-.btn-solid:hover{background:#74c2a1}
+.btn-solid:hover{background:#ffdb72}
 .btn-ghost{background:rgba(14,21,18,.35);border:1px solid rgba(233,238,232,.35);color:var(--light);backdrop-filter:blur(6px)}
 .btn-ghost:hover{border-color:var(--light)}
 .hero-quote{max-width:430px;background:rgba(20,31,25,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(233,238,232,.14);border-radius:var(--radius);padding:18px 22px}
@@ -243,6 +243,32 @@ html{scroll-padding-top:116px}
 .reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:76px;padding-left:5px;border-radius:50%;border:2px solid white;background:rgba(0,0,0,.45);color:white;font-size:28px}
 .reel-caption{position:absolute;bottom:0;left:0;right:0;padding:24px 18px;background:linear-gradient(transparent,rgba(0,0,0,.9));color:white;font-weight:600}
 .reel-preview:hover .reel-play{background:var(--jade-deep)}
+
+/* Red, gold and green drawn from the supplied studio logo. */
+:root{--brand-red:#dc4936;--brand-green:#28753d;--brand-gold:#f2c645}
+header{border-bottom:4px solid transparent;border-image:linear-gradient(90deg,var(--brand-red) 0 33.333%,var(--brand-gold) 33.333% 66.666%,var(--brand-green) 66.666%) 1}
+.nav-links a:hover,.foot-col a:hover{color:var(--brand-gold)}
+.nav-phone{border-color:var(--brand-gold)}
+.hero-eyebrow{color:var(--brand-gold)}
+#services{background:#15361f}
+.svc-card{background:#102a19;border-top:3px solid var(--brand-gold)}
+.svc-card:nth-child(3n+1){border-top-color:var(--brand-red)}
+.svc-card:nth-child(3n){border-top-color:#66b94d}
+#portfolio{background:#fff3d6;color:#213922}
+#portfolio .sec-head p{color:#4b563e}
+#portfolio .sec-head h2{color:#a63526}
+.portfolio-group h3{color:#246638;border-bottom:2px solid #d9bd68;padding-bottom:14px}
+.portfolio-card a{background:#e9dfbc;border:1px solid #d8c99b;border-bottom:4px solid #b8402d}
+.portfolio-card:nth-child(3n+2) a{border-bottom-color:#d5a51a}
+.portfolio-card:nth-child(3n) a{border-bottom-color:#28753d}
+.portfolio-card figcaption{color:#3d513a}
+#studio-film{background:#6e271e}
+#studio-film p{color:#f6dfcb}
+#studio-film .btn-ghost{border-color:var(--brand-gold);color:var(--brand-gold)}
+#crew{background:#15361f}
+footer{border-top:4px solid var(--brand-red)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brand-gold);outline-offset:5px}
+#portfolio a:focus-visible{outline-color:#a63526}
 </style>
 </head>
 <body>
@@ -290,7 +316,7 @@ html{scroll-padding-top:116px}
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <p class="hero-eyebrow">Whaingaroa Raglan</p>
-    <h1>Dreadlocks and hand-forged jewellery, made in Whaingaroa.</h1>
+    <h1>Tā moko, dreadlocks and hand-forged jewellery in Whaingaroa.</h1>
     <p class="hero-sub">A family studio in Raglan. New dreads, careful maintenance, and one-of-a-kind pounamu and sterling silver jewels.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="tel:+642108881298">
@@ -368,7 +394,7 @@ html{scroll-padding-top:116px}
 </section>
 
 <!-- ABOUT -->
-<section id="portfolio"><div class="wrap"><div class="sec-head"><h2>From the studio</h2><p>Tattoo work, jewellery and everyday moments at Happy Dread Love. Select any photo for a closer look.</p></div><div class="portfolio-group"><h3>Tattoo work</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-02.webp" data-photo aria-label="Enlarge: Tattoo detail across the forearm and hand"><img src="img/work-02.webp" alt="Tattoo detail across the forearm and hand" loading="lazy"></a><figcaption>Tattoo detail across the forearm and hand</figcaption></figure><figure class="portfolio-card"><a href="img/work-03.webp" data-photo aria-label="Enlarge: Forearm tattoo detail"><img src="img/work-03.webp" alt="Forearm tattoo detail" loading="lazy"></a><figcaption>Forearm tattoo detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-04.webp" data-photo aria-label="Enlarge: Geometric calf tattoo"><img src="img/work-04.webp" alt="Geometric calf tattoo" loading="lazy"></a><figcaption>Geometric calf tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-05.webp" data-photo aria-label="Enlarge: Black-and-white tattoo detail"><img src="img/work-05.webp" alt="Black-and-white tattoo detail" loading="lazy"></a><figcaption>Black-and-white tattoo detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-06.webp" data-photo aria-label="Enlarge: Lower-leg tattoo"><img src="img/work-06.webp" alt="Lower-leg tattoo" loading="lazy"></a><figcaption>Lower-leg tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-07.webp" data-photo aria-label="Enlarge: Spiral hand tattoo"><img src="img/work-07.webp" alt="Spiral hand tattoo" loading="lazy"></a><figcaption>Spiral hand tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-08.webp" data-photo aria-label="Enlarge: Detailed forearm tattoo"><img src="img/work-08.webp" alt="Detailed forearm tattoo" loading="lazy"></a><figcaption>Detailed forearm tattoo</figcaption></figure></div></div><div class="portfolio-group"><h3>Ancestral jewellery</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-10.webp" data-photo aria-label="Enlarge: A pendant worn with a shoulder tattoo"><img src="img/work-10.webp" alt="A pendant worn with a shoulder tattoo" loading="lazy"></a><figcaption>A pendant worn with a shoulder tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-11.webp" data-photo aria-label="Enlarge: Silver pendant detail"><img src="img/work-11.webp" alt="Silver pendant detail" loading="lazy"></a><figcaption>Silver pendant detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-12.webp" data-photo aria-label="Enlarge: Green stone pendant"><img src="img/work-12.webp" alt="Green stone pendant" loading="lazy"></a><figcaption>Green stone pendant</figcaption></figure><figure class="portfolio-card"><a href="img/work-14.webp" data-photo aria-label="Enlarge: Handmade necklaces on display"><img src="img/work-14.webp" alt="Handmade necklaces on display" loading="lazy"></a><figcaption>Handmade necklaces on display</figcaption></figure><figure class="portfolio-card"><a href="img/work-15.webp" data-photo aria-label="Enlarge: Rings and stones in the studio display"><img src="img/work-15.webp" alt="Rings and stones in the studio display" loading="lazy"></a><figcaption>Rings and stones in the studio display</figcaption></figure></div></div><div class="portfolio-group"><h3>Around the studio</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-01.webp" data-photo aria-label="Enlarge: Outside the Happy Dread Love studio"><img src="img/work-01.webp" alt="Outside the Happy Dread Love studio" loading="lazy"></a><figcaption>Outside the Happy Dread Love studio</figcaption></figure><figure class="portfolio-card"><a href="img/work-09.webp" data-photo aria-label="Enlarge: A moment outside the studio"><img src="img/work-09.webp" alt="A moment outside the studio" loading="lazy"></a><figcaption>A moment outside the studio</figcaption></figure><figure class="portfolio-card"><a href="img/work-13.webp" data-photo aria-label="Enlarge: Happy Dread Love studio entrance"><img src="img/work-13.webp" alt="Happy Dread Love studio entrance" loading="lazy"></a><figcaption>Happy Dread Love studio entrance</figcaption></figure></div></div></div></section><section id="studio-film"><div class="wrap film-layout"><div><h2>Inside the studio</h2><p>Watch the reel from Happy Dread Love on Facebook.</p><a class="btn btn-ghost" href="https://www.facebook.com/reel/1394739218818427" target="_blank" rel="noopener noreferrer">Watch on Facebook ↗</a></div><a class="reel-preview" href="https://www.facebook.com/reel/1394739218818427" target="_blank" rel="noopener noreferrer" aria-label="Watch the Happy Dread Love reel on Facebook"><img src="img/hero-studio.webp" alt="A moment at the Happy Dread Love studio" loading="lazy"><span class="reel-play" aria-hidden="true">▶</span><span class="reel-caption">Watch the reel on Facebook ↗</span></a></div></section>
+<section id="portfolio"><div class="wrap"><div class="sec-head"><h2>Our mahi</h2><p>Tā moko, taonga and everyday moments at Happy Dread Love, here in Whaingaroa. Select any photo for a closer look.</p></div><div class="portfolio-group"><h3>Tā moko</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-02.webp" data-photo aria-label="Enlarge: Tā moko — forearm and hand"><img src="img/work-02.webp" alt="Tā moko — forearm and hand" loading="lazy"></a><figcaption>Tā moko — forearm and hand</figcaption></figure><figure class="portfolio-card"><a href="img/work-03.webp" data-photo aria-label="Enlarge: Tā moko — forearm detail"><img src="img/work-03.webp" alt="Tā moko — forearm detail" loading="lazy"></a><figcaption>Tā moko — forearm detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-04.webp" data-photo aria-label="Enlarge: Tā moko — calf detail"><img src="img/work-04.webp" alt="Tā moko — calf detail" loading="lazy"></a><figcaption>Tā moko — calf detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-05.webp" data-photo aria-label="Enlarge: Tā moko — detail in black and white"><img src="img/work-05.webp" alt="Tā moko — detail in black and white" loading="lazy"></a><figcaption>Tā moko — detail in black and white</figcaption></figure><figure class="portfolio-card"><a href="img/work-06.webp" data-photo aria-label="Enlarge: Tā moko — lower leg"><img src="img/work-06.webp" alt="Tā moko — lower leg" loading="lazy"></a><figcaption>Tā moko — lower leg</figcaption></figure><figure class="portfolio-card"><a href="img/work-07.webp" data-photo aria-label="Enlarge: Tā moko — hand detail"><img src="img/work-07.webp" alt="Tā moko — hand detail" loading="lazy"></a><figcaption>Tā moko — hand detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-08.webp" data-photo aria-label="Enlarge: Tā moko — a closer look"><img src="img/work-08.webp" alt="Tā moko — a closer look" loading="lazy"></a><figcaption>Tā moko — a closer look</figcaption></figure></div></div><div class="portfolio-group"><h3>Taonga &amp; ancestral jewellery</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-10.webp" data-photo aria-label="Enlarge: A pendant worn alongside tā moko"><img src="img/work-10.webp" alt="A pendant worn alongside tā moko" loading="lazy"></a><figcaption>A pendant worn alongside tā moko</figcaption></figure><figure class="portfolio-card"><a href="img/work-11.webp" data-photo aria-label="Enlarge: Silver pendant detail"><img src="img/work-11.webp" alt="Silver pendant detail" loading="lazy"></a><figcaption>Silver pendant detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-12.webp" data-photo aria-label="Enlarge: Green stone pendant"><img src="img/work-12.webp" alt="Green stone pendant" loading="lazy"></a><figcaption>Green stone pendant</figcaption></figure><figure class="portfolio-card"><a href="img/work-14.webp" data-photo aria-label="Enlarge: Handmade necklaces on display"><img src="img/work-14.webp" alt="Handmade necklaces on display" loading="lazy"></a><figcaption>Handmade necklaces on display</figcaption></figure><figure class="portfolio-card"><a href="img/work-15.webp" data-photo aria-label="Enlarge: Rings and stones in the studio display"><img src="img/work-15.webp" alt="Rings and stones in the studio display" loading="lazy"></a><figcaption>Rings and stones in the studio display</figcaption></figure></div></div><div class="portfolio-group"><h3>Around the studio</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-01.webp" data-photo aria-label="Enlarge: Outside the Happy Dread Love studio"><img src="img/work-01.webp" alt="Outside the Happy Dread Love studio" loading="lazy"></a><figcaption>Outside the Happy Dread Love studio</figcaption></figure><figure class="portfolio-card"><a href="img/work-09.webp" data-photo aria-label="Enlarge: A moment outside the studio"><img src="img/work-09.webp" alt="A moment outside the studio" loading="lazy"></a><figcaption>A moment outside the studio</figcaption></figure><figure class="portfolio-card"><a href="img/work-13.webp" data-photo aria-label="Enlarge: Happy Dread Love studio entrance"><img src="img/work-13.webp" alt="Happy Dread Love studio entrance" loading="lazy"></a><figcaption>Happy Dread Love studio entrance</figcaption></figure></div></div></div></section><section id="studio-film"><div class="wrap film-layout"><div><h2>Inside the studio</h2><p>Watch the reel from Happy Dread Love on Facebook.</p><a class="btn btn-ghost" href="https://www.facebook.com/reel/1394739218818427" target="_blank" rel="noopener noreferrer">Watch on Facebook ↗</a></div><a class="reel-preview" href="https://www.facebook.com/reel/1394739218818427" target="_blank" rel="noopener noreferrer" aria-label="Watch the Happy Dread Love reel on Facebook"><img src="img/hero-studio.webp" alt="A moment at the Happy Dread Love studio" loading="lazy"><span class="reel-play" aria-hidden="true">▶</span><span class="reel-caption">Watch the reel on Facebook ↗</span></a></div></section>
 <section id="about" class="light-band">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
