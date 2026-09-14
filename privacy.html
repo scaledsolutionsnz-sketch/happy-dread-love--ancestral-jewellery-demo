@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy | Happy Dread Love &amp; Ancestral Jewellery</title>
 <meta name="description" content="Privacy policy for Happy Dread Love & Ancestral Jewellery, Raglan.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230e1512'/%3E%3Ccircle cx='32' cy='32' r='29' fill='none' stroke='%235fb08d' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23eef1ea' text-anchor='middle'%3EHD%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,12 +27,41 @@ h2{font-family:var(--font-display);font-size:1.5rem;margin:36px 0 12px}
 p{color:var(--dim);margin-bottom:14px}
 footer{border-top:1px solid rgba(233,238,232,.08);padding:28px 22px;text-align:center;font-size:.85rem;color:var(--dim)}
 footer a{text-decoration:underline}
+
+/* Supplied studio identity and portfolio. */
+header{background:#000}.nav{height:100px}.logo{display:inline-flex;align-items:center;gap:14px}
+.hdl-logo{width:84px;height:84px;object-fit:contain;filter:none}
+.logo .brand-name{font-size:1.1rem;color:var(--light);letter-spacing:.03em}
+.foot-grid .hdl-logo{width:140px;height:140px}footer{background:#000}
+.hero-inner{padding-top:150px}.hero-slides img{object-position:center 40%;filter:none}
+html{scroll-padding-top:116px}
+.portfolio-group+.portfolio-group{margin-top:64px}
+.portfolio-group h3{font-family:var(--font-display);font-size:1.65rem;margin-bottom:24px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 22px}
+.portfolio-card{min-width:0}.portfolio-card a{display:block;background:var(--ink2);border-radius:10px;overflow:hidden}
+.portfolio-card img{width:100%;height:340px;object-fit:contain;filter:none;transition:transform .3s}
+.portfolio-card a:hover img{transform:scale(1.025)}
+.portfolio-card figcaption{margin-top:12px;font-size:.9rem;color:var(--dim)}
+.film-layout{display:grid;grid-template-columns:1fr minmax(0,380px);gap:70px;align-items:center}
+.film-layout h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);margin-bottom:20px}
+.film-layout p{max-width:44ch;margin-bottom:28px;color:var(--dim)}
+.reel-frame{width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:var(--ink2)}
+.reel-frame iframe{display:block;width:100%;height:100%;border:0}
+.portfolio-dialog{position:fixed;inset:0;margin:auto;width:min(1100px,94vw);max-width:94vw;max-height:94dvh;padding:18px;background:var(--ink);color:var(--light);border:1px solid var(--jade-deep);border-radius:12px}
+.portfolio-dialog::backdrop{background:rgba(0,0,0,.85)}
+.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.viewer-controls button{min-width:44px;min-height:44px;padding:8px 14px;border:1px solid var(--jade-deep);border-radius:6px;background:var(--ink2);color:var(--light);font:inherit;cursor:pointer}
+#portfolio-image{width:100%;height:70dvh;object-fit:contain;filter:none}#portfolio-caption{text-align:center;margin-top:10px}
+@media(max-width:1050px){.nav .brand-name{display:none}}
+@media(max-width:820px){#mobile-menu{top:100px}.film-layout{grid-template-columns:1fr;gap:32px}.reel-frame{max-width:380px;margin:auto}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-card img{height:280px}.hero-inner{padding-top:140px}}
+@media(max-width:500px){.portfolio-grid{grid-template-columns:1fr}.portfolio-card img{height:420px}.nav .brand-name{display:inline}}
+
 </style>
 </head>
 <body>
 <header>
   <nav class="nav">
-    <a class="logo" href="index.html">Happy Dread <span>Love</span></a>
+    <a class="logo" href="index.html"><img class="hdl-logo" src="img/hdl-logo.webp" alt="Happy Dread Love" width="84" height="84"><span class="brand-name">Happy Dread Love</span></a>
     <a class="back" href="index.html">Back to home</a>
   </nav>
 </header>

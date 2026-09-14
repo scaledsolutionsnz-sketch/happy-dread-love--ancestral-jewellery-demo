@@ -8,8 +8,8 @@
 <meta property="og:title" content="Happy Dread Love &amp; Ancestral Jewellery">
 <meta property="og:description" content="Dreadlocks and hand-forged jewellery, made in Whaingaroa Raglan.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/hero-dreads.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230e1512'/%3E%3Ccircle cx='32' cy='32' r='29' fill='none' stroke='%235fb08d' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23eef1ea' text-anchor='middle'%3EHD%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://happy-dread-love-ancestral-jeweller.vercel.app/img/hero-studio.webp">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -208,6 +208,41 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
   .cta-row .btn{width:100%}
   .crew-card{flex-direction:column;text-align:center;align-items:center}
 }
+
+/* Supplied studio identity and portfolio. */
+header{background:#000}.nav{height:100px}.logo{display:inline-flex;align-items:center;gap:14px}
+.hdl-logo{width:84px;height:84px;object-fit:contain;filter:none}
+.logo .brand-name{font-size:1.1rem;color:var(--light);letter-spacing:.03em}
+.foot-grid .hdl-logo{width:140px;height:140px}footer{background:#000}
+.hero-inner{padding-top:150px}.hero-slides img{object-position:center 40%;filter:none}
+html{scroll-padding-top:116px}
+.portfolio-group+.portfolio-group{margin-top:64px}
+.portfolio-group h3{font-family:var(--font-display);font-size:1.65rem;margin-bottom:24px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 22px}
+.portfolio-card{min-width:0}.portfolio-card a{display:block;background:var(--ink2);border-radius:10px;overflow:hidden}
+.portfolio-card img{width:100%;height:340px;object-fit:contain;filter:none;transition:transform .3s}
+.portfolio-card a:hover img{transform:scale(1.025)}
+.portfolio-card figcaption{margin-top:12px;font-size:.9rem;color:var(--dim)}
+.film-layout{display:grid;grid-template-columns:1fr minmax(0,380px);gap:70px;align-items:center}
+.film-layout h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);margin-bottom:20px}
+.film-layout p{max-width:44ch;margin-bottom:28px;color:var(--dim)}
+.reel-frame{width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:var(--ink2)}
+.reel-frame iframe{display:block;width:100%;height:100%;border:0}
+.portfolio-dialog{position:fixed;inset:0;margin:auto;width:min(1100px,94vw);max-width:94vw;max-height:94dvh;padding:18px;background:var(--ink);color:var(--light);border:1px solid var(--jade-deep);border-radius:12px}
+.portfolio-dialog::backdrop{background:rgba(0,0,0,.85)}
+.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.viewer-controls button{min-width:44px;min-height:44px;padding:8px 14px;border:1px solid var(--jade-deep);border-radius:6px;background:var(--ink2);color:var(--light);font:inherit;cursor:pointer}
+#portfolio-image{width:100%;height:70dvh;object-fit:contain;filter:none}#portfolio-caption{text-align:center;margin-top:10px}
+@media(max-width:1050px){.nav .brand-name{display:none}}
+@media(max-width:820px){#mobile-menu{top:100px}.film-layout{grid-template-columns:1fr;gap:32px}.reel-frame{max-width:380px;margin:auto}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-card img{height:280px}.hero-inner{padding-top:140px}}
+@media(max-width:500px){.portfolio-grid{grid-template-columns:1fr}.portfolio-card img{height:420px}.nav .brand-name{display:inline}}
+
+
+.reel-preview{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;border-radius:12px;background:var(--ink2)}
+.reel-preview img{width:100%;height:100%;object-fit:cover;filter:none}
+.reel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:76px;padding-left:5px;border-radius:50%;border:2px solid white;background:rgba(0,0,0,.45);color:white;font-size:28px}
+.reel-caption{position:absolute;bottom:0;left:0;right:0;padding:24px 18px;background:linear-gradient(transparent,rgba(0,0,0,.9));color:white;font-weight:600}
+.reel-preview:hover .reel-play{background:var(--jade-deep)}
 </style>
 </head>
 <body>
@@ -216,10 +251,11 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
 
 <header>
   <nav class="nav" aria-label="Main">
-    <a class="logo" href="#top">Happy Dread <span>Love</span></a>
+    <a class="logo" href="#top"><img class="hdl-logo" src="img/hdl-logo.webp" alt="Happy Dread Love" width="84" height="84"><span class="brand-name">Happy Dread Love</span></a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Our work</a></li>
+<li><a href="#about">About</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -234,7 +270,8 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
   <div id="mobile-menu">
     <ul>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Our work</a></li>
+<li><a href="#about">About</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -249,11 +286,7 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
 
 <!-- HERO -->
 <section class="hero" aria-label="Welcome">
-  <div class="hero-slides" aria-hidden="true">
-    <img class="on" src="img/hero-dreads.jpg" alt="" fetchpriority="high" width="1800" height="2700">
-    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%230e1512'/%3E%3C/svg%3E" data-src="img/hero-forge.jpg" alt="" width="1800" height="1285" loading="lazy">
-    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%230e1512'/%3E%3C/svg%3E" data-src="img/hero-hair.jpg" alt="" width="1800" height="900" loading="lazy">
-  </div>
+  <div class="hero-slides" aria-hidden="true"><img class="on" src="img/hero-studio.webp" alt="" fetchpriority="high"></div>
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <p class="hero-eyebrow">Whaingaroa Raglan</p>
@@ -335,6 +368,7 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
 </section>
 
 <!-- ABOUT -->
+<section id="portfolio"><div class="wrap"><div class="sec-head"><h2>From the studio</h2><p>Tattoo work, jewellery and everyday moments at Happy Dread Love. Select any photo for a closer look.</p></div><div class="portfolio-group"><h3>Tattoo work</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-02.webp" data-photo aria-label="Enlarge: Tattoo detail across the forearm and hand"><img src="img/work-02.webp" alt="Tattoo detail across the forearm and hand" loading="lazy"></a><figcaption>Tattoo detail across the forearm and hand</figcaption></figure><figure class="portfolio-card"><a href="img/work-03.webp" data-photo aria-label="Enlarge: Forearm tattoo detail"><img src="img/work-03.webp" alt="Forearm tattoo detail" loading="lazy"></a><figcaption>Forearm tattoo detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-04.webp" data-photo aria-label="Enlarge: Geometric calf tattoo"><img src="img/work-04.webp" alt="Geometric calf tattoo" loading="lazy"></a><figcaption>Geometric calf tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-05.webp" data-photo aria-label="Enlarge: Black-and-white tattoo detail"><img src="img/work-05.webp" alt="Black-and-white tattoo detail" loading="lazy"></a><figcaption>Black-and-white tattoo detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-06.webp" data-photo aria-label="Enlarge: Lower-leg tattoo"><img src="img/work-06.webp" alt="Lower-leg tattoo" loading="lazy"></a><figcaption>Lower-leg tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-07.webp" data-photo aria-label="Enlarge: Spiral hand tattoo"><img src="img/work-07.webp" alt="Spiral hand tattoo" loading="lazy"></a><figcaption>Spiral hand tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-08.webp" data-photo aria-label="Enlarge: Detailed forearm tattoo"><img src="img/work-08.webp" alt="Detailed forearm tattoo" loading="lazy"></a><figcaption>Detailed forearm tattoo</figcaption></figure></div></div><div class="portfolio-group"><h3>Ancestral jewellery</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-10.webp" data-photo aria-label="Enlarge: A pendant worn with a shoulder tattoo"><img src="img/work-10.webp" alt="A pendant worn with a shoulder tattoo" loading="lazy"></a><figcaption>A pendant worn with a shoulder tattoo</figcaption></figure><figure class="portfolio-card"><a href="img/work-11.webp" data-photo aria-label="Enlarge: Silver pendant detail"><img src="img/work-11.webp" alt="Silver pendant detail" loading="lazy"></a><figcaption>Silver pendant detail</figcaption></figure><figure class="portfolio-card"><a href="img/work-12.webp" data-photo aria-label="Enlarge: Green stone pendant"><img src="img/work-12.webp" alt="Green stone pendant" loading="lazy"></a><figcaption>Green stone pendant</figcaption></figure><figure class="portfolio-card"><a href="img/work-14.webp" data-photo aria-label="Enlarge: Handmade necklaces on display"><img src="img/work-14.webp" alt="Handmade necklaces on display" loading="lazy"></a><figcaption>Handmade necklaces on display</figcaption></figure><figure class="portfolio-card"><a href="img/work-15.webp" data-photo aria-label="Enlarge: Rings and stones in the studio display"><img src="img/work-15.webp" alt="Rings and stones in the studio display" loading="lazy"></a><figcaption>Rings and stones in the studio display</figcaption></figure></div></div><div class="portfolio-group"><h3>Around the studio</h3><div class="portfolio-grid"><figure class="portfolio-card"><a href="img/work-01.webp" data-photo aria-label="Enlarge: Outside the Happy Dread Love studio"><img src="img/work-01.webp" alt="Outside the Happy Dread Love studio" loading="lazy"></a><figcaption>Outside the Happy Dread Love studio</figcaption></figure><figure class="portfolio-card"><a href="img/work-09.webp" data-photo aria-label="Enlarge: A moment outside the studio"><img src="img/work-09.webp" alt="A moment outside the studio" loading="lazy"></a><figcaption>A moment outside the studio</figcaption></figure><figure class="portfolio-card"><a href="img/work-13.webp" data-photo aria-label="Enlarge: Happy Dread Love studio entrance"><img src="img/work-13.webp" alt="Happy Dread Love studio entrance" loading="lazy"></a><figcaption>Happy Dread Love studio entrance</figcaption></figure></div></div></div></section><section id="studio-film"><div class="wrap film-layout"><div><h2>Inside the studio</h2><p>Watch the reel from Happy Dread Love on Facebook.</p><a class="btn btn-ghost" href="https://www.facebook.com/reel/1394739218818427" target="_blank" rel="noopener noreferrer">Watch on Facebook ↗</a></div><a class="reel-preview" href="https://www.facebook.com/reel/1394739218818427" target="_blank" rel="noopener noreferrer" aria-label="Watch the Happy Dread Love reel on Facebook"><img src="img/hero-studio.webp" alt="A moment at the Happy Dread Love studio" loading="lazy"><span class="reel-play" aria-hidden="true">▶</span><span class="reel-caption">Watch the reel on Facebook ↗</span></a></div></section>
 <section id="about" class="light-band">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
@@ -476,20 +510,21 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
   </div>
 </section>
 
-</main>
+</main><dialog class="portfolio-dialog" id="portfolio-dialog" aria-label="Studio photo gallery"><div class="viewer-controls"><button id="photo-prev" type="button" aria-label="Previous photo">←</button><span id="photo-number"></span><button id="photo-next" type="button" aria-label="Next photo">→</button><button id="photo-close" type="button">Close ×</button></div><img id="portfolio-image" alt=""><p id="portfolio-caption"></p></dialog>
 
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="#top">Happy Dread <span>Love</span></a>
+        <a class="logo" href="#top"><img class="hdl-logo" src="img/hdl-logo.webp" alt="Happy Dread Love" width="84" height="84"><span class="brand-name">Happy Dread Love</span></a>
         <p class="foot-blurb">Family dreadlock studio and jewellery bench in Whaingaroa Raglan. Dread care, extensions and one-of-a-kind ancestral jewels.</p>
       </div>
       <div class="foot-col">
         <h3>Visit</h3>
         <ul>
           <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Our work</a></li>
+<li><a href="#about">About</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -587,5 +622,7 @@ footer{background:#0a100d;border-top:1px solid rgba(233,238,232,.07);padding:56p
   });
 })();
 </script>
-</body>
+<script>
+(function(){const photos=[...document.querySelectorAll('[data-photo]')],dialog=document.getElementById('portfolio-dialog');let current=0;function show(i){current=(i+photos.length)%photos.length;const a=photos[current],image=document.getElementById('portfolio-image');image.src=a.href;image.alt=a.querySelector('img').alt;document.getElementById('portfolio-caption').textContent=image.alt;document.getElementById('photo-number').textContent=(current+1)+' / '+photos.length;}photos.forEach((a,i)=>a.addEventListener('click',e=>{e.preventDefault();show(i);dialog.showModal();}));document.getElementById('photo-close').onclick=()=>dialog.close();document.getElementById('photo-prev').onclick=()=>show(current-1);document.getElementById('photo-next').onclick=()=>show(current+1);dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(current-1);}if(e.key==='ArrowRight'){e.preventDefault();show(current+1);}});})();
+</script></body>
 </html>
